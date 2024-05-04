@@ -1,27 +1,59 @@
-/* Base styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #f8f8f8;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-/* Container for content */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Header */
 header {
-    background: #0077cc;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    margin-bottom: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header .technologies i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #c7d2fe; /* Light blue color for icons */
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.project-tile {
+  background-color: white;
+  width: calc(50% - 40px);
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+}
+
+.project-tile img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .project-tile {
+      width: calc(100% - 40px);
+  }
 }
