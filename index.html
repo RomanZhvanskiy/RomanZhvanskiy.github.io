@@ -9,66 +9,81 @@
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
-<p class="justified-text">
-I have more than 10 years of experience in Python programming and 2 years in machine learning. My background includes experience in Computational Fluid Dynamics (CFD) and quantitative disciplines.
-</p>
-        <div class="technologies">
-    <!-- Data Analysis -->
-    <div class="technology-group">
-        <strong>Data Analysis:</strong>
-        <i class="fab fa-python"></i> Python
-        <i class="fas fa-book"></i> Jupyter
-        <i class="fas fa-database"></i> Pandas
-        <i class="fas fa-calculator"></i> NumPy
-    </div>
+        <div class="header-tile">
+            <img src="me.jpg" alt="Your Photo" class="profile-photo">
+            <div class="header-content">
+                <h1>Roman Zhvanskiy - Portfolio</h1>
+                <p>I have more than 10 years of experience in Python programming and 2 years in machine learning.</p>
+                <p>My background includes experience in Computational Fluid Dynamics (CFD) and quantitative disciplines.</p>
+                <div class="header-buttons">
+                    <a href="mailto:rz03@outlook.com" class="btn">Email</a>
+                    <a href="https://www.linkedin.com/in/roman-zhvansky-09379a34" class="btn">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <section class="technologies">
+            <!-- Data Analysis -->
+            <div class="technology-group">
+                <h2>Data Analysis</h2>
+                <p>
+                    <i class="fab fa-python"></i> Python<br>
+                    <i class="fas fa-book"></i> Jupyter<br>
+                    <i class="fas fa-database"></i> Pandas<br>
+                    <i class="fas fa-calculator"></i> NumPy<br>
+                </p>
+            </div>
 
-    <!-- Machine Learning -->
-    <div class="technology-group">
-        <strong>Machine Learning:</strong>
-        <i class="fas fa-brain"></i> Scikit-learn
-        <i class="fas fa-robot"></i> TensorFlow/Keras
-        <i class="fas fa-network-wired"></i> Neural Networks
-        <i class="fas fa-chart-line"></i> Linear Regression
-        <i class="fas fa-tree"></i> Decision Trees
-        <i class="fas fa-object-group"></i> Clustering
-        <i class="fas fa-chart-bar"></i> Regression Analysis
-    </div>
+            <!-- Machine Learning -->
+            <div class="technology-group">
+                <h2>Machine Learning</h2>
+                <p>
+                    <i class="fas fa-brain"></i> Scikit-learn<br>
+                    <i class="fas fa-robot"></i> TensorFlow/Keras<br>
+                    <i class="fas fa-network-wired"></i> Neural Networks<br>
+                    <i class="fas fa-chart-line"></i> Linear Regression<br>
+                    <i class="fas fa-tree"></i> Decision Trees<br>
+                    <i class="fas fa-object-group"></i> Clustering<br>
+                    <i class="fas fa-chart-bar"></i> Regression Analysis<br>
+                </p>
+            </div>
 
-    <!-- Data Visualization -->
-    <div class="technology-group">
-        <strong>Data Visualization:</strong>
-        <i class="fas fa-chart-area"></i> Matplotlib
-        <i class="fas fa-chart-pie"></i> Seaborn
-        <i class="fas fa-chart-bar"></i> Power BI
-    </div>
-</div>
+            <!-- Data Visualization -->
+            <div class="technology-group">
+                <h2>Data Visualization</h2>
+                <p>
+                    <i class="fas fa-chart-area"></i> Matplotlib<br>
+                    <i class="fas fa-chart-pie"></i> Seaborn<br>
+                    <i class="fas fa-chart-bar"></i> Power BI<br>
+                </p>
+            </div>
+        </section>
     </header>
+
     <div class="project-container">
-        <div class="Project 1: Microphone enhancer project">
-            <img src="project1.jpg" alt="Project 1 Image">
-            <h3>Project 1: Microphone enhancer project1</h3>
+        <!-- Project 1 -->
+        <div class="project-tile">
+            <h3>Project 1: Microphone enhancer project</h3>
+            <img src="project1.jpg" alt="Project 1 Image">			
             <p>This project aims to significantly enhance the audio quality from microphones, particularly those in wireless headphones, which often fail to capture very high and very low frequencies and can produce noisy or muffled sounds. The core of this project lies in transforming audio into a visual format called a mel-spectrogram, which represents audio frequencies over time with varying intensities. This visual representation is then refined using artificial intelligence to address and correct quality degradations, such as noise addition and frequency drops.</p>
-
             <p>The solution employs a neural network model that is designed to operate in real time with minimal delay, making it suitable for live applications. The process involves first degrading the quality of a mel-spectrogram to simulate common audio issues, then restoring it using a neural network that acts as an autoencoder. This model is trained on a rich dataset available from Kaggle, ensuring it learns a broad range of audio qualities.</p>
-
             <p>The model's design focuses on simplicity and speed, ensuring that it can process audio quickly enough to function practically in real-time applications without noticeable delays. By focusing on both immediate and slightly historical data, the system can dynamically adjust audio output to maximize clarity and quality. This project not only showcases the potential of AI in improving everyday technology but also sets a benchmark for future enhancements in audio processing technology.</p>
             <a href="https://github.com/RomanZhvanskiy/microphone_enhancer_gh" class="btn">View Project</a>
-
         </div>
-        <div class="Project 2: Car recommendation project">
-            <img src="project2.jpg" alt="Project 2 Image">
+
+        <!-- Project 2 -->
+        <div class="project-tile">
             <h3>Project 2: Car recommendation project</h3>
+            <img src="project2.jpg" alt="Project 2 Image">			
             <p>The project explores advanced text analytics using Deep Learning and Natural Language Processing (NLP) to develop a car recommendation engine. This system not only suggests similar car models to users but also provides concise summaries of owner reviews, enhancing user decision-making. Created in a week as part of a bootcamp coursework, the project focuses on extracting valuable insights from large datasets of customer reviews on different car models.</p>
-
             <p>The necessity for this engine arises from the challenge of manually summarizing extensive unstructured data, which is time-consuming and impractical. By integrating document classification and summarization, the system ensures that the summaries reflect a range of topics that interest users, rather than concentrating on repetitive themes.</p>
-
             <p>Technically, the project employs a bag-of-words model for initial classification followed by logistic regression for more refined analysis, using tools like NLTK and scikit-learn. The data, segmented into categories such as engines, interiors, and practicality, aids in training the classification model effectively. Sentences classified under these topics are then summarized using state-of-the-art models like BART and Pegasus, the latter preferred for its thematic consistency in summaries.</p>
-
             <p>Executed on the Google Cloud Platform, this project showcases a robust method of handling and summarizing textual data, which could be adapted to various other domains, demonstrating significant potential beyond its initial automotive focus.</p>
-            <a href="https://github.com/marcnaweb/car_recommendation_engine/tree/add_text_categorization_and_summarization" class="btn">View Project</a>        </div>
-        <!-- Add more projects as needed -->
+            <a href="https://github.com/marcnaweb/car_recommendation_engine/tree/add_text_categorization_and_summarization" class="btn">View Project</a>
+        </div>
     </div>
+
+
+
     <footer>
         © 2024 by Roman Zhvanskiy. Proudly created with GitHub Pages.
     </footer>
