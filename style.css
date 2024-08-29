@@ -1,36 +1,157 @@
 body {
+  font-size: 20px; /* Set default font size */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 header {
-  background-color: #333;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0 0 0; /* Remove the bottom padding */
 }
 
-header .technologies i {
-  font-size: 24px;
-  margin: 0 10px;
-  color: #c7d2fe; /* Light blue color for icons */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+   /* max-width: 90%; Make the header tile responsive */
+}
+.header-tile:hover {
+  transform: translateY(-5px);
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.header-content {
+  max-width: 600px;
+  text-align: left;
+  width: 100%;
+}
+
+.header-content h1 {
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-family: Georgia, serif; /* Set font to Georgia */
+  font-size: 24px; /* Set font size to match project descriptions */
+  margin-bottom: 10px;
+}
+
+.header-buttons {
+  margin-top: 10px;
+}
+
+.header-buttons .btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.header-buttons .btn:hover {
+  background-color: #555;
+}
+
+.technologies {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjusts the spacing between columns */
+  padding: 20px;
+  background-color: #fff; /* Added background color for better visibility */
+  max-width: 100%; /* Make sure the container takes up the full width of the screen */
+  
+}
+
+.technology-group {
+  background-color: #f0f0f0; /* Light gray background for the columns */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px;
+  flex: 1;
+  color: black; /* Add this line to make the font color black */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.technology-group:hover {
+  transform: translateY(-5px);
+}
+.technology-group h2 {
+  margin-bottom: 10px;
+}
+
+.technology-group p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 .project-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center; /* Center the project tiles */
   padding: 20px;
+  gap: 20px; /* Add spacing between project tiles */
+  background-color: white; /* Ensure background is white */
+  width: 100%; /* Make sure the container takes up the full width of the screen */
+  margin: 0; /* Remove any automatic margin that might be restricting the width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .project-tile {
-  background-color: white;
-  width: calc(50% - 40px);
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f0f0f0; /* Light gray background for project tiles */
+  width: calc(50% - 20px); /* Adjusted to allow for gap between tiles */
+  padding: 20px; /* Add padding inside each tile for better content spacing */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px; /* Rounded corners */
+  font-size: 24px; /* Set default font size */
+  font-family: Georgia, serif; /* Set font to Georgia */
+}
+
+.project-tile h3 {
+  text-align: center; /* Center the project titles */
+  font-size: 28px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Add some space below the title */
+  font-family: Georgia, serif; /* Ensure consistent font with the rest of the content */
+}
+
+.project-tile p {
+  text-align: justify; /* Justify the project descriptions */
+  font-size: 20px; /* Ensure the font size is consistent */
+  margin-bottom: 20px; /* Add some space below each paragraph */
+  font-family: Georgia, serif; /* Ensure consistent font with the rest of the content */
 }
 
 .project-tile:hover {
@@ -54,6 +175,50 @@ footer {
 
 @media (max-width: 600px) {
   .project-tile {
-      width: calc(100% - 40px);
+    background-color: white; /* Change this to white */
+    width: calc(50% - 40px);
+    margin: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
   }
+}
+
+/* Media query for screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .project-tile,
+  #contact {
+    width: 100%; /* Take up full width */
+    margin: 10px; /* Minimal margin */
+  }
+}
+
+/* Styling for the Contact Me section */
+#contact {
+  background-color: #FFD800; /* School bus yellow */
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 4px solid black; /* Black outline */
+  border-radius: 10px; /* Rounded corners */
+  width: calc(50% - 20px); /* Same width as project tiles */
+  margin: 20px auto; /* Center the tile horizontally with spacing around it */
+  text-align: center; /* Center the text */
+}
+
+#contact h2 {
+  margin-bottom: 10px;
+}
+
+#contact p {
+  margin: 10px 0;
+}
+
+#contact a {
+  color: black; /* Black text for links */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make the links bold */
+}
+
+#contact a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
