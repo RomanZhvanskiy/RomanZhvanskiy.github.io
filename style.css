@@ -1,16 +1,17 @@
 body {
-  font-size: 20px; /* Set default font size */
+  font-size: 20px;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: white;
+  color: black;
 }
 
 header {
   background-color: white;
   color: black;
   text-align: center;
-  padding: 20px 0 0 0; /* Remove the bottom padding */
+  padding: 20px 0 0 0;
 }
 
 .header-container {
@@ -30,22 +31,75 @@ header {
   padding: 20px;
   margin-left: 30px;
   margin-right: 30px;
-
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-
-   /* max-width: 90%; Make the header tile responsive */
+  transition: transform 0.3s ease-in-out;
 }
+
 .header-tile:hover {
   transform: translateY(-5px);
 }
 
-.profile-photo {
+/* CSS-only profile photo easter egg */
+.photo-toggle {
+  display: none;
+}
+
+.profile-photo-switcher {
+  position: relative;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.profile-photo-switcher .profile-photo {
+  position: absolute;
+  inset: 0;
+  width: 150px;
+  height: 150px;
+  margin-right: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.profile-main-photo {
+  opacity: 1;
+}
+
+.profile-family-photo {
+  opacity: 0;
+}
+
+#photo-toggle:checked ~ header .profile-main-photo {
+  opacity: 0;
+}
+
+#photo-toggle:checked ~ header .profile-family-photo {
+  opacity: 1;
+}
+
+.easter-egg {
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 0;
+  color: black;
+  background: transparent;
+  text-decoration: none;
+  cursor: default;
+  line-height: 1;
+  user-select: none;
+}
+
+.easter-egg:hover,
+.easter-egg:focus,
+.easter-egg:active {
+  color: black;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
 }
 
 .header-content {
@@ -61,8 +115,8 @@ header {
 }
 
 .header-content p {
-  font-family: Georgia, serif; /* Set font to Georgia */
-  font-size: 24px; /* Set font size to match project descriptions */
+  font-family: Georgia, serif;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -70,44 +124,48 @@ header {
   margin-top: 10px;
 }
 
-.header-buttons .btn {
+.btn {
   display: inline-block;
   background-color: #333;
   color: white;
   padding: 10px 20px;
+  margin-top: 10px;
   margin-right: 10px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.header-buttons .btn:hover {
+.btn:hover {
   background-color: #555;
+  transform: translateY(-2px);
 }
 
 .technologies {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Adjusts the spacing between columns */
+  gap: 20px;
   padding: 20px;
-  background-color: #fff; /* Added background color for better visibility */
-  max-width: 100%; /* Make sure the container takes up the full width of the screen */
-  
+  background-color: #fff;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .technology-group {
-  background-color: #f0f0f0; /* Light gray background for the columns */
+  background-color: #f0f0f0;
   padding: 10px;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
   margin: 10px;
   flex: 1;
-  color: black; /* Add this line to make the font color black */
+  color: black;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-
+  transition: transform 0.3s ease-in-out;
 }
+
 .technology-group:hover {
   transform: translateY(-5px);
 }
+
 .technology-group h2 {
   margin-bottom: 10px;
 }
@@ -120,47 +178,56 @@ header {
 .project-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the project tiles */
+  justify-content: center;
   padding: 20px;
-  gap: 20px; /* Add spacing between project tiles */
-  background-color: white; /* Ensure background is white */
-  width: 100%; /* Make sure the container takes up the full width of the screen */
-  margin: 0; /* Remove any automatic margin that might be restricting the width */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  gap: 20px;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .project-tile {
-  background-color: #f0f0f0; /* Light gray background for project tiles */
-  width: calc(50% - 20px); /* Adjusted to allow for gap between tiles */
-  padding: 20px; /* Add padding inside each tile for better content spacing */
+  background-color: #f0f0f0;
+  width: calc(50% - 20px);
+  padding: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  border-radius: 10px; /* Rounded corners */
-  font-size: 24px; /* Set default font size */
-  font-family: Georgia, serif; /* Set font to Georgia */
-}
-
-.project-tile h3 {
-  text-align: center; /* Center the project titles */
-  font-size: 28px; /* Adjust the font size as needed */
-  margin-bottom: 20px; /* Add some space below the title */
-  font-family: Georgia, serif; /* Ensure consistent font with the rest of the content */
-}
-
-.project-tile p {
-  text-align: justify; /* Justify the project descriptions */
-  font-size: 20px; /* Ensure the font size is consistent */
-  margin-bottom: 20px; /* Add some space below each paragraph */
-  font-family: Georgia, serif; /* Ensure consistent font with the rest of the content */
+  border-radius: 10px;
+  font-size: 24px;
+  font-family: Georgia, serif;
+  box-sizing: border-box;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
 }
 
+.project-tile h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+}
+
+.project-tile p {
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+}
+
 .project-tile img {
   width: 100%;
-  height: auto;
+  height: 260px;
+  object-fit: contain;
+  object-position: center;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: block;
 }
 
 footer {
@@ -173,36 +240,18 @@ footer {
   width: 100%;
 }
 
-@media (max-width: 600px) {
-  .project-tile {
-    background-color: white; /* Change this to white */
-    width: calc(50% - 40px);
-    margin: 20px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-}
-
-/* Media query for screens smaller than 1200px */
-@media (max-width: 1200px) {
-  .project-tile,
-  #contact {
-    width: 100%; /* Take up full width */
-    margin: 10px; /* Minimal margin */
-  }
-}
-
 /* Styling for the Contact Me section */
 #contact {
-  background-color: #FFD800; /* School bus yellow */
+  background-color: #FFD800;
   padding: 20px;
   margin-top: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  border: 4px solid black; /* Black outline */
-  border-radius: 10px; /* Rounded corners */
-  width: calc(50% - 20px); /* Same width as project tiles */
-  margin: 20px auto; /* Center the tile horizontally with spacing around it */
-  text-align: center; /* Center the text */
+  border: 4px solid black;
+  border-radius: 10px;
+  width: calc(50% - 20px);
+  margin: 20px auto;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 #contact h2 {
@@ -214,11 +263,90 @@ footer {
 }
 
 #contact a {
-  color: black; /* Black text for links */
-  text-decoration: none; /* Remove underline from links */
-  font-weight: bold; /* Make the links bold */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #contact a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline;
+}
+
+/* Media query for screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .project-tile,
+  #contact {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+/* Media query for tablets and phones */
+@media (max-width: 800px) {
+  .header-tile {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .profile-photo-switcher {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  .technologies {
+    flex-direction: column;
+  }
+
+  .technology-group {
+    margin: 0;
+  }
+}
+
+/* Media query for small phones */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  .header-content h1 {
+    font-size: 26px;
+  }
+
+  .header-content p {
+    font-size: 20px;
+  }
+
+  .project-container {
+    padding: 15px;
+  }
+
+  .project-tile {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+  }
+
+  .project-tile h3 {
+    font-size: 24px;
+  }
+
+  .project-tile p {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .project-tile img {
+    height: auto;
+  }
+
+  .btn {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
 }
