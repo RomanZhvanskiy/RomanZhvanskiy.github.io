@@ -16,13 +16,13 @@
     <div class="header-tile">
         <div class="profile-photo-switcher">
             <img src="me_2.JPG" alt="Roman Zhvanskiy profile photo" class="profile-photo profile-main-photo">
-            <img src="family_photo.png" alt="Roman Zhvanskiy family photo" class="profile-photo profile-family-photo">
+            <img src="family_photo.jpg" alt="Roman Zhvanskiy family photo" class="profile-photo profile-family-photo">
         </div>
 
         <div class="header-content">
             <h1>Roman Zhvanskiy - Portfolio</h1>
-            <p>I build Python tools for scientific computing, engineering simulation, risk assessment, data analysis, and machine learning.</p>
-            <p>My background combines Computational Fluid Dynamics, technical safety, fire and explosion modelling, and practical software development.</p>
+            <p>I build scientific software that turns engineering, simulation, and data-analysis problems into practical Python tools.</p>
+            <p>My work combines Computational Fluid Dynamics, technical safety, fire and explosion modelling, numerical methods, and applied data science.</p>
             <div class="header-buttons">
                 <a href="mailto:rz03@outlook.com" class="btn">Email</a>
                 <a href="https://www.linkedin.com/in/roman-zhvanskiy-09379a34/" class="btn">LinkedIn</a>
@@ -34,108 +34,104 @@
     <label for="photo-toggle" class="easter-egg">&#96;&#96;&#96;</label>
 
     <section class="technologies">
-        <!-- Scientific Computing -->
         <div class="technology-group">
             <h2>Scientific Computing</h2>
             <p>
                 <i class="fab fa-python"></i> Python<br>
-                <i class="fas fa-calculator"></i> NumPy<br>
-                <i class="fas fa-database"></i> Pandas<br>
-                <i class="fas fa-book"></i> Jupyter<br>
-                <i class="fas fa-chart-area"></i> Matplotlib<br>
+                <i class="fas fa-calculator"></i> NumPy / Pandas<br>
+                <i class="fas fa-chart-area"></i> Jupyter / Matplotlib<br>
                 <i class="fas fa-terminal"></i> Linux / CLI<br>
-                <i class="fas fa-microchip"></i> HPC Workflows<br>
+                <i class="fas fa-microchip"></i> HPC Workflows
             </p>
         </div>
 
-        <!-- CFD & Simulation -->
         <div class="technology-group">
             <h2>CFD & Simulation</h2>
             <p>
                 <i class="fas fa-wind"></i> ANSYS CFX<br>
-                <i class="fas fa-fire"></i> FLACS / KFX<br>
+                <i class="fas fa-fire"></i> FLACS / KFX / FDS<br>
                 <i class="fas fa-water"></i> Multiphase Flow<br>
-                <i class="fas fa-burn"></i> Fire & Explosion Modelling<br>
-                <i class="fas fa-cloud"></i> Gas Dispersion<br>
-                <i class="fas fa-temperature-high"></i> Heat Transfer<br>
-                <i class="fas fa-atom"></i> Combustion<br>
+                <i class="fas fa-cloud"></i> Fire, Explosion & Dispersion<br>
+                <i class="fas fa-temperature-high"></i> Heat Transfer / Combustion
             </p>
         </div>
 
-        <!-- Risk & Technical Safety -->
         <div class="technology-group">
             <h2>Risk & Technical Safety</h2>
             <p>
                 <i class="fas fa-shield-alt"></i> ERA / FRA / QRA<br>
                 <i class="fas fa-project-diagram"></i> Fire & Gas Mapping<br>
-                <i class="fas fa-map-marked-alt"></i> Probabilistic Gas Mapping<br>
-                <i class="fas fa-helicopter"></i> Helideck CAP 437<br>
                 <i class="fas fa-industry"></i> Offshore / Onshore Safety<br>
-                <i class="fas fa-chart-line"></i> Exceedance Curves<br>
-                <i class="fas fa-file-alt"></i> Client Reporting<br>
+                <i class="fas fa-chart-line"></i> Probabilistic Analysis<br>
+                <i class="fas fa-file-alt"></i> Technical Reporting
             </p>
         </div>
 
-        <!-- Data Science & ML -->
         <div class="technology-group">
             <h2>Data Science & ML</h2>
             <p>
                 <i class="fas fa-brain"></i> Scikit-learn<br>
-                <i class="fas fa-robot"></i> TensorFlow / Keras<br>
+                <i class="fas fa-robot"></i> PyTorch / TensorFlow / Keras<br>
                 <i class="fas fa-network-wired"></i> Neural Networks<br>
-                <i class="fas fa-chart-bar"></i> Statistics<br>
-                <i class="fas fa-random"></i> Monte Carlo<br>
-                <i class="fas fa-cloud"></i> Google Cloud<br>
-                <i class="fas fa-chart-pie"></i> Power BI<br>
+                <i class="fas fa-chart-bar"></i> Statistics / Monte Carlo<br>
+                <i class="fas fa-chart-pie"></i> Power BI / Google Cloud
             </p>
         </div>
     </section>
 </header>
 
 <div class="project-container">
-    <!-- Project 1 -->
+    <!-- Project 5 -->
     <div class="project-tile">
-        <h3>Project 1: Oil-Wave Coupled Slick Model</h3>
-        <img src="OilSlickSim.png" alt="Oil slick drift simulation over time">
-        <p>This project develops a time-dependent 2D Eulerian model for simulating an oil slick evolving on the sea surface. It couples oil thickness and oil transport with a simplified two-band wave field, allowing the model to represent how small and large waves affect slick motion, spreading, and damping.</p>
-        <p>The core of the model is a closed physical feedback loop: wind drives waves, oil damps waves, waves advect and drift the oil, and the evolving oil thickness feeds back into wave damping. The implementation uses modular Python components for wave evolution, oil velocity closure, finite-volume-style time stepping, grid construction, and simulation output.</p>
-        <p><strong>Skills demonstrated:</strong> Python, numerical modelling, CFD thinking, finite-volume methods, wave-oil coupling, scientific software design.</p>
-        <a href="https://github.com/RomanZhvanskiy/OilSpill" class="btn">View Project</a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-tile">
-        <h3>Project 2: FDS GUI - Parametric Fire & Explosion Simulation Toolkit</h3>
-        <img src="FDSGUI.png" alt="Pool fire in a bund near an oil tank with smoke plume">
-        <p>This project is a Tkinter-based graphical front-end for FDS, the Fire Dynamics Simulator. It automates the setup, execution, and post-processing of large numbers of fire and explosion simulations while keeping the generated FDS input files transparent, inspectable, and editable.</p>
-        <p>The tool supports explosion scenarios, pool-fire cases, pressure probe grids, drag-proxy monitoring volumes, batch case generation, and structured Excel post-processing. It is designed for engineering productivity: speeding up repetitive simulation workflows without turning the analysis into a black box.</p>
-        <p><strong>Skills demonstrated:</strong> Python, Tkinter, FDS automation, fire modelling, explosion modelling, batch simulation workflows, engineering post-processing.</p>
-        <a href="https://github.com/RomanZhvanskiy/fds-gui" class="btn">View Project</a>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-tile">
-        <h3>Project 3: Microphone Enhancer Project</h3>
-        <img src="project1.jpg" alt="Microphone enhancer project image">
-        <p>This project explores AI-based audio enhancement for microphones, especially those in wireless headphones where recorded sound can be noisy, muffled, or missing high and low frequencies. The approach converts audio into mel-spectrograms and uses a neural network to restore degraded audio representations.</p>
-        <p>The model is designed for practical real-time use, with a lightweight structure intended to minimise delay. It combines signal processing, spectrogram-based image restoration, and deep learning to improve audio clarity in a way that could be adapted to live communication tools.</p>
-        <p><strong>Skills demonstrated:</strong> Python, audio processing, mel-spectrograms, TensorFlow / Keras, neural networks, real-time ML thinking.</p>
-        <a href="https://github.com/RomanZhvanskiy/microphone_enhancer_gh" class="btn">View Project</a>
+        <h3>Project 5: Plot Digitizer</h3>
+        <img src="PlotDigitizer.jpg" alt="Plot Digitizer scientific curve extraction application">
+        <p><strong>Plot Digitizer</strong> recovers numerical x-y data from images of scientific graphs without requiring the user to click along every curve manually. After axis calibration, the application removes non-data elements such as the frame, legend, and background, separates the plotted traces, reconstructs the curves in calibrated coordinates, and provides the result for review and export.</p>
+        <p>The data-science challenge is robust curve separation in noisy raster images. The pipeline combines engineered colour features, K-means initialisation, strict non-overlapping hyperboxes in a 14-dimensional colour space, and iterative refinement using a custom spatial curve-shape loss. A small neural network is used only for uncertain background-bound estimation; the final classification remains explicit and inspectable rather than relying on an end-to-end segmentation model.</p>
+        <p><strong>Highlights:</strong> image processing, feature engineering, K-means clustering, custom objective functions, iterative optimisation, interpretable classification, targeted neural networks, and multi-stage pipeline validation.</p>
+        <a href="https://github.com/RomanZhvanskiy/graph_digitizer/tree/main?tab=readme-ov-file" class="btn">View Project</a>
     </div>
 
     <!-- Project 4 -->
     <div class="project-tile">
-        <h3>Project 4: Car Recommendation Project</h3>
+        <h3>Project 4: Oil-Wave Coupled Slick Model</h3>
+        <img src="OilSlickSim.jpg" alt="Oil slick drift simulation over time">
+        <p>A time-dependent 2D Eulerian model for simulating an oil slick on the sea surface. The model couples oil thickness and transport with a simplified two-band wave field, creating a closed feedback loop in which wind drives waves, oil damps waves, waves influence slick motion, and the evolving slick changes the wave field.</p>
+        <p><strong>Highlights:</strong> Python, numerical modelling, finite-volume methods, coupled physical systems, CFD thinking, modular scientific software, and simulation post-processing.</p>
+        <a href="https://github.com/RomanZhvanskiy/OilSpill" class="btn">View Project</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-tile">
+        <h3>Project 3: FDS GUI - Parametric Fire & Explosion Simulation Toolkit</h3>
+        <img src="FDSGUI.jpg" alt="Pool fire in a bund near an oil tank with smoke plume">
+        <p>A Tkinter front-end for FDS that automates the setup, execution, and post-processing of large batches of fire and explosion simulations while keeping the generated FDS input files transparent and editable. It supports parametric explosion and pool-fire cases, probe grids, monitoring volumes, batch generation, and structured Excel output.</p>
+        <p><strong>Highlights:</strong> Python, Tkinter, FDS automation, parametric simulation, fire and explosion modelling, batch workflows, and engineering post-processing.</p>
+        <a href="https://github.com/RomanZhvanskiy/fds-gui" class="btn">View Project</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-tile">
+        <h3>Project 2: Microphone Enhancer Project</h3>
+        <img src="project1.jpg" alt="Microphone enhancer project image">
+        <p>An AI-based audio-enhancement experiment for noisy or bandwidth-limited microphones. Audio is transformed into mel-spectrograms and processed by a lightweight neural network designed to restore degraded frequency information while remaining suitable for low-latency use.</p>
+        <p><strong>Highlights:</strong> Python, audio processing, mel-spectrograms, TensorFlow / Keras, neural networks, signal restoration, and real-time ML constraints.</p>
+        <a href="https://github.com/RomanZhvanskiy/microphone_enhancer_gh" class="btn">View Project</a>
+    </div>
+
+    <!-- Project 1 -->
+    <div class="project-tile">
+        <h3>Project 1: Car Recommendation Project</h3>
         <img src="project2.jpg" alt="Car recommendation project image">
-        <p>This project applies NLP and machine learning to car owner reviews. It recommends similar car models and produces concise summaries of user feedback, helping users compare vehicles without manually reading large volumes of unstructured review text.</p>
-        <p>The workflow combines topic classification, bag-of-words features, logistic regression, and summarisation models such as BART and Pegasus. The project demonstrates how text analytics can turn noisy customer review data into structured decision-support outputs.</p>
-        <p><strong>Skills demonstrated:</strong> Python, NLP, scikit-learn, text classification, summarisation, Google Cloud Platform, applied machine learning.</p>
+        <p>A team NLP and machine-learning project that turns large volumes of car-owner reviews into useful decision support: recommendations for similar models plus concise summaries of what owners say about specific aspects of a car.</p>
+        <p><strong>My contribution:</strong> I built the review-summarisation pipeline. Non-English reviews were first translated, then a bag-of-words text model was used to identify comments relating to specific subjects such as reliability and cabin comfort. The selected text was passed through two different neural summarisation models in sequence; splitting the task across two stages avoided the repetition and context-length problems that appeared when a single summariser was given too much review text at once.</p>
+        <p><strong>Highlights:</strong> NLP pipeline design, multilingual text preprocessing, bag-of-words modelling, subject-specific review extraction, neural text summarisation, handling model context limits, and applied machine learning.</p>
         <a href="https://github.com/marcnaweb/car_recommendation_engine/tree/add_text_categorization_and_summarization" class="btn">View Project</a>
     </div>
+
 </div>
 
 <footer>
-    © 2024 by Roman Zhvanskiy. Proudly created with GitHub Pages.
+    © 2026 by Roman Zhvanskiy. Portfolio design and copy refined with assistance from ChatGPT.
 </footer>
 
 

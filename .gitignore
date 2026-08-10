@@ -1,0 +1,9 @@
+
+# Local backup / recovery files
+bak/
+
+# Windows metadata
+*:Zone.Identifier
+
+
+
